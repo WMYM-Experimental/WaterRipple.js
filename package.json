@@ -1,0 +1,20 @@
+{
+  "name": "todo-react",
+  "version": "1.0.0",
+  "description": "This is the improved \"To do\" making using React.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WashingtonYandun/TODO-React.js.git"
+  },
+  "keywords": [],
+  "author": "Washington Yandun, @WashingtonYandun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WashingtonYandun/TODO-React.js/issues"
+  },
+  "homepage": "https://github.com/WashingtonYandun/TODO-React.js#readme"
+}
