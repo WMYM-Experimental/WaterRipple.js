@@ -28,7 +28,7 @@ class Wave {
     this.x = x;
     this.y = y;
     this.radius = radius;
-    this.increment = getRandomNumber(2, 5);
+    this.increment = 15;
   }
   draw() {
     ctx.lineWidth = 1;
@@ -40,6 +40,7 @@ class Wave {
     ctx.stroke();
   }
   update() {
+    this.increment++;
     this.radius += this.increment;
     this.draw();
   }
@@ -48,14 +49,16 @@ class Wave {
 window.addEventListener("mousemove", (e) => {
   mouse.x = e.x;
   mouse.y = e.y;
-  ripple.push(new Wave(mouse.x, mouse.y, getRandomNumber(20, 50)));
+  if (counter % 5 == 0) {
+    ripple.push(new Wave(mouse.x, mouse.y, getRandomNumber(20, 50)));
+  }
 });
 
 const animate = () => {
   counter++;
   ripple.forEach((w) => {
     w.update();
-    if ((w.radius > 100 || w.radius > 300) && counter % 2 == 0) {
+    if ((w.radius > 500 || w.radius > 600) && counter % 2 == 0) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ripple.shift();
       counter = 0;
